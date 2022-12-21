@@ -11,3 +11,29 @@
 Додай слухачів кліків до кнопок, всередині яких збільшуй або зменшуй значення лічильника.
 Оновлюй інтерфейс новим значенням змінної counterValue. */
 
+
+let counterValue = 0;
+
+const valueRef = document.querySelector('#value');
+const decrementButtonRef = document.querySelector(
+  'button[data-action="decrement"]'
+);
+const incrementButtonRef = document.querySelector(
+  'button[data-action="increment"]'
+);
+
+decrementButtonRef.addEventListener(
+    'click',
+    () => {
+        counterValue -= 1;
+        valueRef.textContent = counterValue;
+    }
+);
+
+incrementButtonRef.addEventListener(
+  'click',
+    () => {
+        counterValue += 1;
+        valueRef.textContent = counterValue;
+    }
+);

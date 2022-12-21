@@ -23,3 +23,21 @@
 #validation-input.invalid {
   border-color: #f44336;
 } */
+
+
+const inputRef = document.querySelector('#validation-input');
+
+inputRef.addEventListener('blur', onInputBlur);
+
+function onInputBlur(event) {
+  const { dataset, value, classList } = event.currentTarget;
+
+  if (value.length === Number.parseInt(dataset.length)) {
+    classList.add('valid');
+    classList.remove('invalid');
+    return;
+  }
+
+  classList.add('invalid');
+  classList.remove('valid');
+}

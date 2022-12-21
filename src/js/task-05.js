@@ -3,3 +3,17 @@
 
 <input type="text" id="name-input" placeholder="Please enter your name" />
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1> */
+
+
+const nameInputRef = document.querySelector('#name-input');
+const nameOutputRef = document.querySelector('#name-output');
+
+nameInputRef.addEventListener('input', event => {
+    nameOutputRef.textContent = event.currentTarget.value;
+
+    if (!nameOutputRef.textContent.length) {
+    nameOutputRef.textContent = 'Anonymous';
+    }
+})
+
+
