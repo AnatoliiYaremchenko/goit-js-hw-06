@@ -30,23 +30,6 @@ const ingredients = [
   'Condiments',
 ];
 
-// Var 1
-
-/* const ingredientsRef = document.querySelector('#ingredients');
-const newItemsArray = [];
-
-ingredients.forEach(ingredient => {
-  const newItem = document.createElement('li');
-
-  newItem.textContent = ingredient;
-  newItem.classList.add("item");
-  newItemsArray.push(newItem);
-})
-
-ingredientsRef.append(...newItemsArray); */
-
-// Var 2
-
 const ingredientsListRef = document.querySelector("#ingredients");
 
 const makeIngredient = ingredient => {
@@ -61,18 +44,3 @@ const makeIngredient = ingredient => {
 const ingredientsList = ingredients.map(makeIngredient);
 
 ingredientsListRef.append(...ingredientsList);
-
-// Var 3
-
-/* const ingredientsListRef = document.querySelector("#ingredients");
-
-const IngredientsArray = ingredients.map(ingredient => {
-  const newIngredient = document.createElement("li");
-
-  newIngredient.textContent = ingredient;
-  newIngredient.classList.add("item");
-
-  return newIngredient;
-});
-
-ingredientsListRef.append(...IngredientsArray); */
