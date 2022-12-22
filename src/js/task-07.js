@@ -9,8 +9,8 @@
 const fontSizeControlRef = document.querySelector('#font-size-control');
 const textRef = document.querySelector('#text');
 
-fontSizeControlRef.addEventListener('blur', onFontSizeControlBlur);
+fontSizeControlRef.addEventListener('input', onFontSizeControlInput);
 
-function onFontSizeControlBlur(event) {
+function onFontSizeControlInput(event) {
     textRef.style.fontSize = `${event.currentTarget.value}px`;
 }
