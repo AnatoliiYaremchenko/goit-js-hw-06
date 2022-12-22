@@ -12,8 +12,8 @@ nameInputRef.addEventListener('input', event => {
     nameOutputRef.textContent = event.currentTarget.value;
 
     if (!nameOutputRef.textContent.length) {
-    nameOutputRef.textContent = 'Anonymous';
+        nameOutputRef.textContent = 'Anonymous';
     }
-})
+});
 
 

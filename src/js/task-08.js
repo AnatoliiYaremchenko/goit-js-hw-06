@@ -39,7 +39,7 @@ function onFormSubmit(event) {
   if (!formElements.email.value || !formElements.password.value) {
     alert("Всі поля повинні бути заповнені!");
     return;
-  }
+  };
 
   const email = formElements.email.value;
   const password = formElements.password.value;
