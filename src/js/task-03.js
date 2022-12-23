@@ -39,15 +39,22 @@ const images = [
 
 const galleryListRef = document.querySelector(".gallery");
 
+const createImagesListFromArray = (array) => {
+  let elementsForInsert = ``;
+
+  for (let i = 0; i < array.length; i++) {
+    elementsForInsert += `<li><img src="${images[i].url}" alt="${images[i].alt}"></li>`;
+  };
+
+  return elementsForInsert;
+};
+
 galleryListRef.insertAdjacentHTML(
   "beforeend",
-  `<li><img src="${images[0].url}" alt="${images[0].alt}"></li>
-   <li><img src="${images[1].url}" alt="${images[1].alt}"></li>
-   <li><img src="${images[2].url}" alt="${images[2].alt}"></li>
-  `
+  `${createImagesListFromArray(images)}`
 );
 
-const galleryItemRef = galleryListRef.querySelectorAll('li')
+const galleryItemRef = galleryListRef.querySelectorAll('li');
 
 galleryListRef.classList.add('grid');
 galleryItemRef.forEach(item => item.classList.add('grid__item'));
