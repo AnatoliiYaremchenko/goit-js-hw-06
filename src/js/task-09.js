@@ -22,7 +22,7 @@ function getRandomHexColor() {
 };
 
 const refs = {
-  body: document.querySelector('body'),
+  body: document.body,
   colorName: document.querySelector('.color'),
   changeColorBtn: document.querySelector('.change-color'),
 };
